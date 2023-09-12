@@ -146,10 +146,8 @@ const game = () =>{
     const bet = getBet(balance,numberOfLines);
     balance -= bet*numberOfLines;
     const reels = spin();
-    console.log(reels);
     // We should transpose the matrix after spinning so that it is easier for us to check what they won.
     const rows = transpose(reels);
-    console.log(rows);
     printRows(rows);
 
     const winnings = getWinnings(rows,bet,numberOfLines);
